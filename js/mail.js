@@ -12,7 +12,8 @@ console.log(usersList);
 let userMail = '';
 
 //prints an appropriate message on the result of the check
-let message = '';
+let messageInv = 'Benvenuto';
+let messageNotInv = 'Non sei stato invitato';
 
 let submit = document.getElementById('submit');
 submit.addEventListener('click', checklist);
@@ -22,6 +23,7 @@ function checklist(e){
     e.preventDefault();
     let invitated = '';
     let search = document.getElementById('mail').value;
+    let boxMail = '';
 
     for(let i = 0; i < usersList.length; i++){
         if(usersList[i].toLowerCase() === search.toLowerCase()){
@@ -29,10 +31,11 @@ function checklist(e){
         }
     }
     if(invitated){
-       console.log('Benvenuto');
+        boxMail = document.getElementById('boxMail').innerHTML = `<h3 class="text-white">${messageInv}</h3>`
+       console.log(messageInv);
     } else{
-        console.log('Non sei stato invitato')
+        boxMail = document.getElementById('boxMail').innerHTML = `<h3 class="text-white">${messageNotInv}</h3>`
+        console.log(messageNotInv)
     }
-
 
 }
