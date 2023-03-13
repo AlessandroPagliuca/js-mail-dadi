@@ -8,16 +8,28 @@
     <title>dice</title>
 </head>
 <body class="bg-dark">
-    <div id="boxDice" class="d-flex justify-content-center align-items-center vh-100">
+    <div id="boxDice"  class="d-flex justify-content-center align-items-center vh-100">
         <form>
-            <div class="mb-3">
-              <label for="btnPush" class="form-label text-white">Generate number</label>
-              <button type="button" id="btnPush" class="btn btn-outline-warning m-4">Push</button>  
+            <div class="row">
+                <div class="col-12 d-flex justify-content-center align-items-center">
+                    <label for="btnPush" class="form-label text-white">Generate number</label>
+                    <button type="button" id="btnPush" class="btn btn-outline-warning m-4">Play</button>        
+                </div>
             </div>
-          </form>
-          <div id="boxMessage" class="text-white">ciao</div>
-
+            <div class="row ">
+                <div class="col">
+                    <div id="boxMessage" class="text-white">
+                        <p class="opacity-0">l tuo risultato 1, il risultato del bot 1: Pareggio</p>
+                    </div>
+                </div>
+            </div>
+           
+        </form>
     </div>
+    <!--
+       
+    -->
+
 
     
     <script src="../js/dice.js"></script>

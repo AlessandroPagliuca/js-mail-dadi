@@ -34,6 +34,7 @@ function pushNumber(e){
         element = document.getElementById("boxMessage");
         element.appendChild(elementPara);
         console.log('Hai vinto');
+        
     } else if(numberUser < numberComputer){
         elementPara = document.createElement("p");
         message = document.createTextNode(`Il tuo risultato ${numberUser}, il risultato del bot ${numberComputer}: Hai perso`);
