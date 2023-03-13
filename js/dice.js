@@ -11,5 +11,16 @@ console.log(usersName);
 
 //create random number
 
-let getRandomNumber = Math.floor(Math.random() * 100) + 1;
-console.log(getRandomNumber);
+let getRandomNumber = Math.floor(Math.random() * 6) + 1;
+//console.log(getRandomNumber);
+
+//Generate number when click button
+let btnPush = document.getElementById('btnPush');
+btnPush.addEventListener('click', pushNumber);
+function pushNumber(e){
+    e.preventDefault();
+    let numberUser = '';
+    numberUser = getRandomNumber;
+    console.log(getRandomNumber);
+}
+
