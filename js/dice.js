@@ -9,6 +9,9 @@ Stabilire il vincitore, in base a chi fa il punteggio più alto.
 let usersName = ['Liam', 'Lucas', 'James', 'Oliver', 'Elijah'];
 console.log(usersName);
 
+//
+let boxMessage = document.getElementById('boxMessage');
+
 //Generate number when click button
 let btnPush = document.getElementById('btnPush');
 btnPush.addEventListener('click', pushNumber);
@@ -19,11 +22,33 @@ function pushNumber(e){
     let numberComputer = Math.floor(Math.random() * 6) + 1;
     console.log(numberUser, numberComputer);
 
+    boxMessage.innerHTML = '';
+    let elementPara = '';
+    let message = '';
+    let element = '';
+
     if(numberUser > numberComputer){
+        elementPara = document.createElement("p");
+        message = document.createTextNode(`Il tuo risultato ${numberUser}, il risultato del bot ${numberComputer}: Hai vinto`);
+        elementPara.appendChild(message);
+        element = document.getElementById("boxMessage");
+        element.appendChild(elementPara);
         console.log('Hai vinto');
     } else if(numberUser < numberComputer){
+        elementPara = document.createElement("p");
+        message = document.createTextNode(`Il tuo risultato ${numberUser}, il risultato del bot ${numberComputer}: Hai perso`);
+        elementPara.appendChild(message);
+        element = document.getElementById("boxMessage");
+        element.appendChild(elementPara);
+
         console.log('Hai perso');
     } else{
+        elementPara = document.createElement("p");
+        message = document.createTextNode(`Il tuo risultato ${numberUser}, il risultato del bot ${numberComputer}: Pareggio`);
+        elementPara.appendChild(message);
+        element = document.getElementById("boxMessage");
+        element.appendChild(elementPara);
+
         console.log('Pareggio')
     }
 }
