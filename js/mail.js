@@ -29,11 +29,13 @@ function checklist(e){
         }
     }
     if(invitated){
-        boxMail = document.getElementById('boxMail').innerHTML = `<h3 class="text-white">${messageInv}</h3>`
+        boxMail = document.getElementById('boxMail').innerHTML = `<h3 class="text-white">${messageInv}</h3>`;
+        boxMail = document.getElementById('boxMail').innerHTML += `<a href="./dice.html" class="btn btn-outline-warning mx-3">dadi</a>`;
+
        console.log(messageInv);
     } else{
-        boxMail = document.getElementById('boxMail').innerHTML = `<h3 class="text-white">${messageNotInv}</h3>`
-        console.log(messageNotInv)
+        boxMail = document.getElementById('boxMail').innerHTML = `<h3 class="text-white">${messageNotInv}</h3>`;
+        console.log(messageNotInv);
     }
 
 }
