@@ -9,20 +9,22 @@ Stabilire il vincitore, in base a chi fa il punteggio più alto.
 let usersName = ['Liam', 'Lucas', 'James', 'Oliver', 'Elijah'];
 console.log(usersName);
 
-//create random number
-
-
-//console.log(getRandomNumber);
-
 //Generate number when click button
 let btnPush = document.getElementById('btnPush');
 btnPush.addEventListener('click', pushNumber);
 
 function pushNumber(e){
     e.preventDefault();
-    let getRandomNumber = Math.floor(Math.random() * 6) + 1;
-    let numberUser = getRandomNumber;
-    let numberComputer = getRandomNumber;
+    let numberUser = Math.floor(Math.random() * 6) + 1;
+    let numberComputer = Math.floor(Math.random() * 6) + 1;
     console.log(numberUser, numberComputer);
+
+    if(numberUser > numberComputer){
+        console.log('Hai vinto');
+    } else if(numberUser < numberComputer){
+        console.log('Hai perso');
+    } else{
+        console.log('Pareggio')
+    }
 }
 
