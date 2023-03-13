@@ -8,8 +8,6 @@
 //list of who can access
 let usersList = ['liam@email.com', 'lucas@email.com', 'james@email.com', 'oliver@email.com', 'elijah@email.com'];
 console.log(usersList);
-//Ask the user for his email
-let userMail = '';
 
 //prints an appropriate message on the result of the check
 let messageInv = 'Benvenuto';
