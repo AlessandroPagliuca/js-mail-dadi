@@ -6,8 +6,8 @@
  */
 
 //list of who can access
-let usersList = ['Liam', 'Lucas', 'James', 'Oliver', 'Elijah'];
-
+let usersList = ['liam@email.com', 'lucas@email.com', 'james@email.com', 'oliver@email.com', 'elijah@email.com'];
+console.log(usersList);
 //Ask the user for his email
 let userMail = '';
 
@@ -15,7 +15,7 @@ let userMail = '';
 let message = '';
 
 let submit = document.getElementById('submit');
-submit.addEventListener('click',);
+submit.addEventListener('click', checklist);
 
 
 function checklist(e){
@@ -28,13 +28,10 @@ function checklist(e){
             invitated = usersList[i];
         }
     }
-    switch(true){
-        case(invitated):
-            console.log(invitated);
-        break;
-
-    default:
-        console.log()
+    if(invitated){
+       console.log('Benvenuto');
+    } else{
+        console.log('Non sei stato invitato')
     }
 
 
